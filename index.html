@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J.A.R.V.I.S.</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="console">
+  <section class="core">
+    <div class="reactor" id="reactor" aria-hidden="true">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="dot"></div>
+    </div>
+    <h1>J.A.R.V.I.S.</h1>
+    <ul class="status">
+      <li><span class="led on"></span>Engine online</li>
+      <li><span class="led" id="safeLed"></span><span id="safeText">Safe mode off</span></li>
+      <li><span class="led" id="micLed"></span><span id="micText">Microphone off</span></li>
+    </ul>
+  </section>
+
+  <section class="talk">
+    <div id="log" class="log" aria-live="polite"></div>
+    <form id="form" class="input">
+      <input id="text" type="text" autocomplete="off" placeholder="Type a command, e.g. open youtube" autofocus>
+      <button type="submit">Send</button>
+      <button type="button" id="mic">Mic: off</button>
+      <button type="button" id="stop">Stop talking</button>
+    </form>
+  </section>
+
+  <aside class="memory">
+    <h2>Memories</h2>
+    <ul id="memList"></ul>
+    <p id="memEmpty" class="empty">Nothing saved yet. Say "remember that I like tea".</p>
+  </aside>
+</main>
+<script src="/static/script.js"></script>
+</body>
+</html>

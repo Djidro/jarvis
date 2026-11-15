@@ -1,0 +1,5 @@
+venv/
+vosk-model-*/
+actions.log
+jarvis.db
+__pycache__/
